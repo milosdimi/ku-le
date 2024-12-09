@@ -1,11 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ku-Le - Ihr vertrauenswürdiger Auto-Händler mit einer großen Auswahl an Fahrzeugen."
+    />
+    <meta
+      name="keywords"
+      content="Auto, Autohändler, Fahrzeuge, Ku-Le, Auto kaufen, Gebrauchtwagen, Neuwagen"
+    />
+    <meta name="author" content="Ku-Le" />
+    <link rel="icon" type="image/x-icon" href="./img/ku-le-logo.JPEG" />
     <title>Ku-Le | Home</title>
-</head>
-<body>
-    
-</body>
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Eigene CSS-Datei -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/ku-le-logo.JPEG" alt="Ku-Le Logo" class="logo-img" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cars">ANKAUF</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#offers">Angebote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero-Bereich -->
+    <header class="hero-section">
+      <div class="hero-overlay">
+        <div class="container text-center">
+          <h1 id="hero-title" class="animated-title"></h1>
+          <p id="hero-subtitle" class="animated-subtitle">
+            Sie möchten ein Fahrzeug verkaufen? Dann sind Sie bei uns genau
+            richtig!
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Über uns Sektion -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Über Ku-Le</h2>
+            <p>
+              Ku-Le ist ein moderner Autohändler, der auf Qualität und
+              Kundenzufriedenheit setzt.
+              <strong class="highlight-text"
+                >Wir kaufen alle Arten von Fahrzeugen an</strong
+              >, egal in welchem Zustand – mit oder ohne Pickerl. Dazu gehören
+              auch:
+            </p>
+            <ul class="custom-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Autos (Pkw und Nutzfahrzeuge)</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> <strong>Mopeds</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Motorräder</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Landwirtschaftsmaschinen</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Bau- und Baufahrzeuge</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Wohnmobile und Wohnwagen</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Transporter und Lieferwagen</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Quads und ATV-Fahrzeuge</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Elektrofahrzeuge (E-Autos, E-Scooter, E-Bikes)</strong>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Unfallfahrzeuge (mit oder ohne Schäden)</strong>
+              </li>
+            </ul>
+            <p>
+              Unser Ziel ist es, Ihnen den bestmöglichen Service und faire
+              Preise zu bieten.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="./img/volga-4856133_1280.png"
+              class="img-fluid rounded"
+              alt="Über uns"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="wrapper py-5">
+      <div class="container">
+        <div class="inner text-center">
+          <h2 class="mb-4">Haben Sie weitere Fragen?</h2>
+          <p>
+            <strong>Lassen Sie uns in Verbindung bleiben:</strong> Nutzen Sie
+            gerne unser Online-Kontaktformular oder schauen Sie bei uns vorbei.
+            Wir freuen uns auf Ihren Besuch. (Ersuchen Sie nur um vorherige
+            Terminvereinbarung.)
+          </p>
+
+          <!-- Social Media Buttons -->
+          <div class="social-buttons mt-4">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-social mb-3"
+            >
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-danger btn-social mb-3"
+            >
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+
+            <a
+              href="https://wa.me/+436767575687"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-success btn-social mb-3"
+            >
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+
+            <a href="tel:+436767575687" class="btn btn-info btn-social mb-3">
+              <i class="bi bi-telephone-fill"></i> Anrufen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fahrzeuge Sektion -->
+    <section id="cars" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Unsere Fahrzeuge</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
+              <div class="card-body">
+                <h5 class="card-title">Audi A4</h5>
+                <p class="card-text">Preis: 25.000€</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
+              <div class="card-body">
+                <h5 class="card-title">Zaporozec</h5>
+                <p class="card-text">Preis: 25.000€</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
+              <div class="card-body">
+                <h5 class="card-title">Lada niVA</h5>
+                <p class="card-text">Preis: 25.000€</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Kontakt</h2>
+
+        <div class="row">
+          <!-- Kontaktinformationen -->
+          <div class="col-md-6 mb-4">
+            <h4>Unsere Kontaktdaten</h4>
+            <ul class="list-unstyled contact-info">
+              <li>
+                <i class="bi bi-telephone-fill"></i> Telefon:
+                <a href="tel:+436767575687">+436767575687</a>
+              </li>
+              <li>
+                <i class="bi bi-envelope-fill"></i> E-Mail:
+                <a href="mailto:info@ku-le.de">info@ku-le.de</a>
+              </li>
+              <li>
+                <i class="bi bi-geo-alt-fill"></i> Adresse: Münchner Str. 21,
+                6330 Kufstein
+              </li>
+            </ul>
+
+            <!-- Google Maps -->
+            <div class="mt-4">
+              <h5>Unsere Adresse</h5>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2288.0127804644103!2d12.163153035308431!3d47.58811136738783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477637544147571f%3A0x81f4b69d346f08b7!2sM%C3%BCnchner%20Str.%2021%2C%206330%20Zell!5e1!3m2!1sde!2sat!4v1733787765218!5m2!1sde!2sat"
+                width="100%"
+                height="250"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Kontaktformular -->
+          <div class="col-md-6">
+            <h4>Schreiben Sie uns</h4>
+            <form onsubmit="sendMail(event)">
+              <div class="mb-3">
+                <label for="name" class="form-label">Ihr Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Ihr Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Ihre E-Mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Ihre E-Mail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Nachricht</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Ihre Nachricht"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Nachricht senden
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Logo und Beschreibung -->
+          <div class="col-md-4 mb-4">
+            <img
+              src="./img/ku-le-logo.JPEG"
+              alt="Ku-Le Logo"
+              class="footer-logo mb-3"
+            />
+            <p>
+              Ku-Le - Ihr vertrauenswürdiger Auto-Händler. Wir kaufen Fahrzeuge
+              in jedem Zustand - schnell, einfach und unkompliziert.
+            </p>
+          </div>
+
+          <!-- Kontaktinformationen -->
+          <div class="col-md-4 mb-4">
+            <h5>Kontakt</h5>
+            <ul class="list-unstyled contact-info">
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+                <a href="tel:+491234567890">+49 123 456 7890</a>
+              </li>
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+                <a href="mailto:info@ku-le.de">info@ku-le.de</a>
+              </li>
+              <li>
+                <i class="bi bi-geo-alt-fill"></i> Musterstraße 12, 12345
+                Musterstadt, Deutschland
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media & Rechtliches -->
+          <div class="col-md-4 mb-4">
+            <h5>Folge uns</h5>
+            <div class="social-icons">
+              <a href="https://www.facebook.com" class="text-white me-3"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="https://www.instagram.com" class="text-white me-3"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+              <a href="https://wa.me/123456789" class="text-white me-3"
+                ><i class="bi bi-whatsapp fs-4"></i
+              ></a>
+            </div>
+
+            <h5 class="mt-4">Rechtliches</h5>
+            <ul class="list-unstyled">
+              <li><a href="impressum.html" class="text-white">Impressum</a></li>
+              <li>
+                <a href="datenschutzerklaerung.html" class="text-white"
+                  >Datenschutz</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="bg-white" />
+
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              © 2024 Ku-Le. Alle Rechte vorbehalten. | made by
+              <a href="https://www.dimit.cc/">dimit</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="animation.js"></script>
+  </body>
 </html>

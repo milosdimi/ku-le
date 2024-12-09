@@ -1,0 +1,323 @@
+/* Globale Stile */
+body {
+  background: linear-gradient(135deg, #0075ff, #ff0000);
+  color: #fff; /* Weißer Text für bessere Lesbarkeit */
+  margin: 0px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+section#about img {
+  border-radius: 10px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #000;
+}
+
+footer p {
+  margin: 0;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Hero-Bereich */
+.hero-section {
+  background-image: url("./img/hero-bg.webp");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Über uns Sektion */
+#about,
+#cars {
+  background: linear-gradient(135deg, #0075ff, #ff0000);
+  color: #fff; /* Weißer Text für bessere Lesbarkeit */
+}
+
+.container-custom {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+h1.animated-title {
+  font-size: 3rem;
+  color: #88b9ff;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  animation: fade-in 3s ease-out forwards;
+}
+
+p.animated-subtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: slide-in 2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#cta {
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 1.25), rgba(0, 0, 0, 0.25)),
+    url(../../img/shelby-3821719_1280.jpg); /* Bild und Farbüberlagerung */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  padding: 50px 0; /* Abstand nach oben und unten */
+}
+
+#cta h2 {
+  color: #86b7fe; /* Goldene Farbe für die Überschrift */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Schatten für die Überschrift */
+}
+
+#cta p {
+  color: rgba(255, 255, 255, 0.85); /* Textfarbe etwas heller */
+  max-width: 800px; /* Maximalbreite des Textes */
+  margin: 0 auto; /* Zentriert den Text */
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.custom-list i {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.custom-list strong {
+  font-weight: 600;
+}
+
+.highlight-text {
+  font-weight: 800;
+  color: #28a745;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: #e6ffe6;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Kontakt Sektion */
+
+#contact h2,
+#contact p,
+#contact a,
+#contact label {
+  color: #fff; /* Weißer Text */
+}
+
+form .form-control {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparente Eingabefelder */
+  color: #fff;
+  border-radius: 8px;
+}
+
+form button[type="submit"] {
+  background-color: #0075ff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+footer h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+footer p,
+footer a {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  color: #28a745;
+  text-decoration: none;
+}
+
+footer .contact-info li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+footer .contact-info i {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin-right: 10px;
+}
+
+footer .list-unstyled a {
+  color: #ddd;
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer .list-unstyled a:hover {
+  color: #28a745;
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+footer .social-icons i {
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
+
+footer .social-icons a {
+  color: #fff;
+}
+
+footer .social-icons a:hover {
+  color: #28a745;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer .list-unstyled a {
+  color: #ddd;
+}
+
+footer .list-unstyled a:hover {
+  color: #28a745;
+}
+
+@media (max-width: 768px) {
+  footer .text-md-end {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+  footer .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation */
+  .logo-img {
+    height: 40px;
+  }
+
+  /* Hero-Bereich */
+  .hero-section {
+    height: 70vh;
+  }
+
+  h1.animated-title {
+    font-size: 2.5rem;
+  }
+
+  p.animated-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .container-custom {
+    max-width: 90%;
+  }
+
+  .custom-list li {
+    font-size: 1rem;
+  }
+  footer .text-md-end {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+}
