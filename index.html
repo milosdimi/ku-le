@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="img/ku-le-logo.JPEG" alt="Ku-Le Logo" class="logo-img" />
         </a>
         <button
@@ -148,50 +148,28 @@
       </div>
     </section>
 
-    <section id="cta" class="wrapper py-5">
-      <div class="container">
-        <div class="inner text-center">
-          <h2 class="mb-4">Haben Sie weitere Fragen?</h2>
-          <p>
-            <strong>Lassen Sie uns in Verbindung bleiben:</strong> Nutzen Sie
-            gerne unser Online-Kontaktformular oder schauen Sie bei uns vorbei.
-            Wir freuen uns auf Ihren Besuch. (Ersuchen Sie nur um vorherige
-            Terminvereinbarung.)
-          </p>
-
-          <!-- Social Media Buttons -->
-          <div class="social-buttons mt-4">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary btn-social mb-3"
-            >
-              <i class="bi bi-facebook"></i> Facebook
-            </a>
-
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-danger btn-social mb-3"
-            >
-              <i class="bi bi-instagram"></i> Instagram
-            </a>
-
-            <a
-              href="https://wa.me/+436767575687"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-success btn-social mb-3"
-            >
-              <i class="bi bi-whatsapp"></i> WhatsApp
-            </a>
-
-            <a href="tel:+436767575687" class="btn btn-info btn-social mb-3">
-              <i class="bi bi-telephone-fill"></i> Anrufen
-            </a>
-          </div>
+    <!-- Call-to-Action Sektion -->
+    <section id="cta" class="animated-bg-section py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Haben Sie weitere Fragen?</h2>
+        <p>
+          <strong>Lassen Sie uns in Verbindung bleiben:</strong> Nutzen Sie
+          gerne unser Online-Kontaktformular oder schauen Sie bei uns vorbei.
+          Wir freuen uns auf Ihren Besuch.
+        </p>
+        <div class="social-buttons mt-4">
+          <a href="#" class="btn btn-primary me-2">
+            <i class="bi bi-facebook"></i> Facebook
+          </a>
+          <a href="#" class="btn btn-danger me-2">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+          <a href="#" class="btn btn-success me-2">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+          <a href="tel:+436767575687" class="btn btn-info">
+            <i class="bi bi-telephone-fill"></i> Anrufen
+          </a>
         </div>
       </div>
     </section>
@@ -202,38 +180,39 @@
         <h2 class="text-center mb-4">Unsere Fahrzeuge</h2>
         <div class="row">
           <div class="col-md-4">
-            <div class="card">
-              <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
-              <div class="card-body">
-                <h5 class="card-title">Audi A4</h5>
-                <p class="card-text">Preis: 25.000€</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
-              <div class="card-body">
-                <h5 class="card-title">Zaporozec</h5>
-                <p class="card-text">Preis: 25.000€</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
-              <div class="card-body">
-                <h5 class="card-title">Lada niVA</h5>
-                <p class="card-text">Preis: 25.000€</p>
-                <a href="#" class="btn btn-primary">Details</a>
+            <div class="card flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
+                  <div class="card-body">
+                    <h5 class="card-title">Audi A4</h5>
+                    <p class="card-text">Preis: 25.000€</p>
+                    <button class="btn btn-primary flip-button">Details</button>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <div class="card-body">
+                    <h5 class="card-title">Audi A4 - Details</h5>
+                    <ul class="list-unstyled">
+                      <li><strong>Kilometerstand:</strong> 120.000 km</li>
+                      <li><strong>Kraftstoff:</strong> Diesel</li>
+                      <li><strong>Farbe:</strong> Schwarz</li>
+                    </ul>
+                    <button class="btn btn-secondary flip-button">Zurück</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
+    
+    
+    
+    
+    
 
     <section id="contact" class="py-5">
       <div class="container">

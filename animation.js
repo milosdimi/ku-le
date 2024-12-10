@@ -35,27 +35,39 @@ function sendMail(event) {
 }
 
 // Check if the user has previously accepted/declined cookies
-document.addEventListener('DOMContentLoaded', function () {
-  const cookieBanner = document.getElementById('cookie-banner');
-  const acceptButton = document.getElementById('accept-cookies');
-  const declineButton = document.getElementById('decline-cookies');
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptButton = document.getElementById("accept-cookies");
+  const declineButton = document.getElementById("decline-cookies");
 
   // Überprüfen, ob der Benutzer bereits eine Wahl getroffen hat
-  if (!localStorage.getItem('cookiesAccepted')) {
-    cookieBanner.classList.remove('hidden'); // Cookie-Banner anzeigen
+  if (!localStorage.getItem("cookiesAccepted")) {
+    cookieBanner.classList.remove("hidden"); // Cookie-Banner anzeigen
   } else {
-    cookieBanner.classList.add('hidden'); // Cookie-Banner ausblenden
+    cookieBanner.classList.add("hidden"); // Cookie-Banner ausblenden
   }
 
   // Benutzer akzeptiert Cookies
-  acceptButton.addEventListener('click', function () {
-    localStorage.setItem('cookiesAccepted', 'true');
-    cookieBanner.classList.add('hidden'); // Cookie-Banner ausblenden
+  acceptButton.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieBanner.classList.add("hidden"); // Cookie-Banner ausblenden
   });
 
   // Benutzer lehnt Cookies ab
-  declineButton.addEventListener('click', function () {
-    localStorage.setItem('cookiesAccepted', 'false');
-    cookieBanner.classList.add('hidden'); // Cookie-Banner ausblenden
+  declineButton.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "false");
+    cookieBanner.classList.add("hidden"); // Cookie-Banner ausblenden
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const flipButtons = document.querySelectorAll('.flip-button');
+
+  flipButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const flipCard = button.closest('.flip-card');
+      flipCard.classList.toggle('flipped'); // Karte drehen oder zurückdrehen
+    });
+  });
+});
+

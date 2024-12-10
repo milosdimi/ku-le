@@ -1,19 +1,34 @@
-/* Globale Stile */
+/* ============================================
+   Globale Stile
+============================================= */
 body {
   background: linear-gradient(135deg, #0075ff, #ff0000);
   color: #fff; /* Weißer Text für bessere Lesbarkeit */
-  margin: 0px;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-
+.navbar {
+  align-items: center; /* Vertikale Zentrierung */
+}
 .navbar-brand {
   font-weight: bold;
+  padding: 5px;
 }
 
+.navbar-brand img {
+  height: 50px; /* Standardhöhe für das Logo */
+  width: auto; /* Automatische Breite für Proportionen */
+  max-width: 100%; /* Verhindert Überlauf */
+}
 .header h1 {
   font-size: 3rem;
 }
 
-section#about img {
+/* ============================================
+   Sektionen
+============================================= */
+section#about img,
+section#cars img {
   border-radius: 10px;
 }
 
@@ -27,20 +42,9 @@ section#about img {
   font-weight: bold;
 }
 
-footer {
-  background-color: #000;
-}
-
-footer p {
-  margin: 0;
-}
-
-.logo-img {
-  height: 50px;
-  width: auto;
-}
-
-/* Hero-Bereich */
+/* ============================================
+   Hero-Bereich
+============================================= */
 .hero-section {
   background-image: url("./img/hero-bg.webp");
   background-size: cover;
@@ -60,19 +64,19 @@ footer p {
   width: 100%;
   height: 100%;
 }
-/* Über uns Sektion */
+
+/* ============================================
+   Über uns & Fahrzeuge Sektion
+============================================= */
 #about,
 #cars {
   background: linear-gradient(135deg, #0075ff, #ff0000);
-  color: #fff; /* Weißer Text für bessere Lesbarkeit */
+  color: #fff;
 }
 
-.container-custom {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-
+/* ============================================
+   Animierte Titel
+============================================= */
 h1.animated-title {
   font-size: 3rem;
   color: #88b9ff;
@@ -111,75 +115,43 @@ p.animated-subtitle {
     transform: translateX(0);
   }
 }
-#cta {
-  background-attachment: fixed;
-  background-image: linear-gradient(rgba(0, 0, 0, 1.25), rgba(0, 0, 0, 0.25)),
-    url(../../img/shelby-3821719_1280.jpg); /* Bild und Farbüberlagerung */
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+/* ============================================
+   Animierte Hintergründe
+============================================= */
+.animated-bg-section {
   position: relative;
-  text-align: center;
-  z-index: 1;
-  padding: 50px 0; /* Abstand nach oben und unten */
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #4a90e2, #56c596, #ffcc00);
+  background-size: 400% 400%;
+  animation: gradient-animation 8s infinite alternate;
 }
 
-#cta h2 {
-  color: #86b7fe; /* Goldene Farbe für die Überschrift */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Schatten für die Überschrift */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
-#cta p {
-  color: rgba(255, 255, 255, 0.85); /* Textfarbe etwas heller */
-  max-width: 800px; /* Maximalbreite des Textes */
-  margin: 0 auto; /* Zentriert den Text */
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.custom-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.custom-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.custom-list i {
-  font-size: 1.5rem;
-  color: #28a745;
-  margin-right: 10px;
-}
-
-.custom-list strong {
-  font-weight: 600;
-}
-
-.highlight-text {
-  font-weight: 800;
-  color: #28a745;
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  background-color: #e6ffe6;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-/* Kontakt Sektion */
-
+/* ============================================
+   Kontaktformular
+============================================= */
 #contact h2,
 #contact p,
 #contact a,
 #contact label {
-  color: #fff; /* Weißer Text */
+  color: #fff;
 }
 
 form .form-control {
-  background-color: rgba(255, 255, 255, 0.2); /* Transparente Eingabefelder */
+  background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   border-radius: 8px;
 }
@@ -199,7 +171,9 @@ form button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Footer Styles */
+/* ============================================
+   Footer
+============================================= */
 footer {
   background-color: #000;
   color: #fff;
@@ -228,28 +202,6 @@ footer a:hover {
   text-decoration: none;
 }
 
-footer .contact-info li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-footer .contact-info i {
-  font-size: 1.5rem;
-  color: #28a745;
-  margin-right: 10px;
-}
-
-footer .list-unstyled a {
-  color: #ddd;
-  display: block;
-  margin-bottom: 10px;
-}
-
-footer .list-unstyled a:hover {
-  color: #28a745;
-}
-
 footer hr {
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -271,15 +223,9 @@ footer p {
   margin-bottom: 0;
 }
 
-footer .list-unstyled a {
-  color: #ddd;
-}
-
-footer .list-unstyled a:hover {
-  color: #28a745;
-}
-
-/* Cookie-Banner */
+/* ============================================
+   Cookie-Banner
+============================================= */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -347,25 +293,74 @@ footer .list-unstyled a:hover {
   display: none !important;
 }
 
-
-@media (max-width: 768px) {
-  footer .text-md-end {
-    text-align: center !important;
-    margin-top: 20px;
-  }
-
-  footer .social-icons {
-    justify-content: center;
-  }
+/* Flip-Karten-Stile */
+.flip-card {
+  perspective: 1000px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 300px; /* Standardhöhe für mobile Geräte */
+  position: relative;
 }
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg); /* Drehung um 180 Grad bei der Klasse 'flipped' */
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background-color: #fff; /* Farbe der Vorderseite */
+}
+
+.flip-card-back {
+  background-color: #007bff;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.flip-card img {
+  width: 100%;
+  height: 150px; /* Bildhöhe anpassen */
+  object-fit: cover;
+}
+
+.flip-card .card-body {
+  padding: 15px;
+}
+
+/* Button */
+.flip-button {
+  width: 100%;
+  margin-top: 10px;
+  display: block;
+}
+
+/* ============================================
+   Responsive Design
+============================================= */
 @media (max-width: 768px) {
-  /* Navigation */
   .logo-img {
     height: 40px;
   }
+  .navbar-brand img {
+    height: 40px; /* Kleinere Höhe für Mobilgeräte */
+  }
 
-  /* Hero-Bereich */
   .hero-section {
     height: 70vh;
   }
@@ -378,15 +373,48 @@ footer .list-unstyled a:hover {
     font-size: 1.2rem;
   }
 
-  .container-custom {
-    max-width: 90%;
-  }
-
-  .custom-list li {
-    font-size: 1rem;
-  }
   footer .text-md-end {
     text-align: center !important;
     margin-top: 20px;
+  }
+
+  footer .social-icons {
+    justify-content: center;
+  }
+
+  .parallax-bg {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  #cta .social-buttons a {
+    display: block; /* Die Buttons werden untereinander gestapelt */
+    width: 100%; /* Buttons nehmen die volle Breite ein */
+    margin-bottom: 10px; /* Abstand zwischen den Buttons */
+  }
+  .animated-bg-section {
+    height: 450px;
+  }
+  #cars .card {
+    margin-bottom: 15px; /* Weniger Abstand zwischen den Karten auf Mobilgeräten */
+  }
+
+  #cars .card img {
+    height: 150px; /* Kleinere Bildhöhe für Mobilgeräte */
+    object-fit: cover;
+  }
+  .flip-card {
+    height: 400px; /* Höhere Karten für größere Bildschirme */
+  }
+
+  .flip-card img {
+    height: 200px; /* Größeres Bild */
+  }
+
+  .flip-card .card-body {
+    height: calc(100% - 200px); /* Platz für den Button */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
