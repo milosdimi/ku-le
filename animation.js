@@ -14,7 +14,6 @@ function typeWriter() {
 // Starte die Animation beim Laden der Seite
 window.addEventListener("load", typeWriter);
 
-
 // Contakt
 function sendMail(event) {
   event.preventDefault();
@@ -34,3 +33,29 @@ function sendMail(event) {
       console.log(error);
     });
 }
+
+// Check if the user has previously accepted/declined cookies
+document.addEventListener('DOMContentLoaded', function () {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
+  const declineButton = document.getElementById('decline-cookies');
+
+  // Überprüfen, ob der Benutzer bereits eine Wahl getroffen hat
+  if (!localStorage.getItem('cookiesAccepted')) {
+    cookieBanner.classList.remove('hidden'); // Cookie-Banner anzeigen
+  } else {
+    cookieBanner.classList.add('hidden'); // Cookie-Banner ausblenden
+  }
+
+  // Benutzer akzeptiert Cookies
+  acceptButton.addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieBanner.classList.add('hidden'); // Cookie-Banner ausblenden
+  });
+
+  // Benutzer lehnt Cookies ab
+  declineButton.addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'false');
+    cookieBanner.classList.add('hidden'); // Cookie-Banner ausblenden
+  });
+});
