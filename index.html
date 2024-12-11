@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <!-- Dokumenten-Einstellungen -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ku-Le - Ihr vertrauenswürdiger Auto-Händler mit einer großen Auswahl an Fahrzeugen."
-    />
-    <meta
-      name="keywords"
-      content="Auto, Autohändler, Fahrzeuge, Ku-Le, Auto kaufen, Gebrauchtwagen, Neuwagen"
-    />
-    <meta name="author" content="Ku-Le" />
-    <link rel="icon" type="image/x-icon" href="./img/ku-le-logo.JPEG" />
     <title>Ku-Le | Home</title>
+
+    <!-- SEO Meta-Tags -->
+    <meta name="description" content="Ku-Le - Ihr vertrauenswürdiger Auto-Händler mit einer großen Auswahl an Fahrzeugen." />
+    <meta name="keywords" content="Auto, Autohändler, Fahrzeuge, Ku-Le, Auto kaufen, Gebrauchtwagen, Neuwagen" />
+    <meta name="author" content="Ku-Le" />
+    <link rel="canonical" href="https://www.ku-le.de/" /> <!-- Ändere auf deine Domain -->
+    <meta name="robots" content="index, follow" /> <!-- Indexiere die Seite und folge den Links -->
+
+    <!-- Open Graph (OG) Tags für Social Media -->
+    <meta property="og:title" content="Ku-Le | Ihr Auto-Händler in Österreich" />
+    <meta property="og:description" content="Verkaufen Sie Ihr Auto einfach und unkompliziert mit Ku-Le - kostenfreie Abholung in ganz Österreich." />
+    <meta property="og:url" content="https://www.ku-le.de/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.ku-le.de/img/ku-le-logo.JPEG" /> <!-- Pfad zum Bild (Logo oder hero-image) -->
+    <meta property="og:locale" content="de_AT" /> <!-- Sprache/Region für OG -->
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ku-Le | Ihr Auto-Händler in Österreich" />
+    <meta name="twitter:description" content="Verkaufen Sie Ihr Auto einfach und unkompliziert mit Ku-Le - kostenfreie Abholung in ganz Österreich." />
+    <meta name="twitter:image" content="https://www.ku-le.de/img/ku-le-logo.JPEG" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/ku-le-logo.JPEG" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/ku-le-logo.JPEG" />
+    <link rel="apple-touch-icon" href="./img/ku-le-logo.JPEG" />
+
+    <!-- Preload / Preconnect -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
     <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <!-- Eigene CSS-Datei -->
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
+
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -48,10 +67,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#cars">ANKAUF</a>
+              <a class="nav-link" href="ankauf.html">ANKAUF</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#cars">Angebote</a>
@@ -183,7 +202,11 @@
             <div class="card flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="./img/car1.webp" class="card-img-top" alt="Auto 1" />
+                  <img
+                    src="./img/car1.webp"
+                    class="card-img-top"
+                    alt="Auto 1"
+                  />
                   <div class="card-body">
                     <h5 class="card-title">Audi A4</h5>
                     <p class="card-text">Preis: 25.000€</p>
@@ -198,7 +221,9 @@
                       <li><strong>Kraftstoff:</strong> Diesel</li>
                       <li><strong>Farbe:</strong> Schwarz</li>
                     </ul>
-                    <button class="btn btn-secondary flip-button">Zurück</button>
+                    <button class="btn btn-secondary flip-button">
+                      Zurück
+                    </button>
                   </div>
                 </div>
               </div>
@@ -207,12 +232,6 @@
         </div>
       </div>
     </section>
-    
-    
-    
-    
-    
-    
 
     <section id="contact" class="py-5">
       <div class="container">
