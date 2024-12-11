@@ -1,6 +1,6 @@
 // Hero-Titel-Animation
 const titleElement = document.getElementById("hero-title");
-const titleText = "Willkommen bei Ku-Le";
+const titleText = "Willkommen bei Ku-Le Cars";
 let index = 0;
 
 function typeWriter() {

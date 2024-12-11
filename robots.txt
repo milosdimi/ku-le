@@ -1,0 +1,37 @@
+# -------------------------
+# 🦾 Robots.txt für www.ku-le.cc
+# -------------------------
+
+# Erlaube allen Suchmaschinen den Zugriff auf die Hauptseiten
+User-agent: *
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /cgi-bin/
+Disallow: /test/
+Disallow: /scripts/
+Disallow: /config/
+Disallow: /server/
+Disallow: /mail/
+Disallow: /core/
+
+# Erlaube den Zugriff auf diese wichtigen Seiten
+Allow: / 
+Allow: /index.html
+Allow: /ankauf.html
+Allow: /impressum.html
+Allow: /datenschutzerklaerung.html
+Allow: /style.css
+Allow: /img/
+
+# Blockiere Zugriffe auf unnötige Ressourcen
+Disallow: /*.log$
+Disallow: /*.json$
+Disallow: /*.env$
+Disallow: /*.bak$
+Disallow: /*.sql$
+Disallow: /*.zip$
+
+# Sitemap für bessere SEO
+Sitemap: https://www.ku-le.cc/sitemap.xml
