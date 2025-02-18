@@ -1,46 +1,59 @@
 /* ============================================
    Globale Stile
 ============================================= */
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./fonts/JosefinSans-Regular.woff2') format('woff2'),
+       url('./fonts/JosefinSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./fonts/JosefinSans-Bold.woff2') format('woff2'),
+       url('./fonts/JosefinSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 body {
   background: linear-gradient(135deg, #0075ff, #ff0000);
   color: #fff;
-  /* Weißer Text für bessere Lesbarkeit */
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  /* Moderner, cleaner Look */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+/* Überschriften */
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ============================================
+   Navigation
+============================================= */
 .navbar {
   align-items: center;
-  /* Vertikale Zentrierung */
-}
-
-.navbar-brand {
-  font-weight: bold;
-  padding: 5px;
-}
-
-/* 🏎️ Navbar Custom Styles */
-.navbar-custom {
-  background: rgba(0, 0, 0, 0);
-  /* Leicht transparenter Hintergrund */
-  -webkit-backdrop-filter: blur(8px);
-  /* Weichzeichner für besseren Look */
-  backdrop-filter: blur(5px);
-  /* Weichzeichner für besseren Look */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  /* Schatten für mehr Tiefe */
-  padding: 12px 0;
-  /* Etwas mehr Padding für mehr Luft */
   transition: all 0.3s ease-in-out;
 }
 
-/* 🏁 Navbar Hover-Effekte */
+.navbar-custom {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 12px 0;
+}
+
 .navbar-custom .nav-link {
   color: #ffffff;
-  /* Standardfarbe */
   font-weight: 500;
-  /* Etwas fetter für bessere Lesbarkeit */
   padding: 10px 15px;
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
@@ -48,54 +61,24 @@ body {
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
   color: #ffdd57;
-  /* Gelbe Farbe beim Hover oder wenn aktiv */
   background: rgba(255, 255, 255, 0.1);
-  /* Leichter Highlight-Effekt */
   border-radius: 5px;
 }
 
-/* 📌 Fix für das Logo */
 .logo-img {
   height: 50px;
-  /* Logo etwas größer */
   width: auto;
-  max-width: 100%;
   border-radius: 5px;
-  /* Verhindert Überlauf */
   transition: transform 0.3s ease-in-out;
 }
 
 .logo-img:hover {
   transform: scale(1.1);
-  /* Leichte Vergrößerung beim Hover */
-}
-
-.header h1 {
-  font-size: 3rem;
-}
-
-/* ============================================
-   Sektionen
-============================================= */
-section#about img,
-section#cars img {
-  border-radius: 10px;
-}
-
-.card {
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 /* ============================================
    Hero-Bereich
 ============================================= */
-/* 🏎️ Hero-Bereich mit Overlay */
 .hero-section {
   position: relative;
   width: 100%;
@@ -103,13 +86,11 @@ section#cars img {
   overflow: hidden;
 }
 
-/* 🖼️ Hero-Bilder im Carousel */
 .hero-img {
   height: 90vh;
   object-fit: cover;
 }
 
-/* 🎭 Overlay für bessere Lesbarkeit */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -117,7 +98,6 @@ section#cars img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* Dunkler, aber transparenter Overlay */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,33 +106,26 @@ section#cars img {
   padding: 20px;
 }
 
-/* 🎨 Animierter Hero-Titel */
 .animated-title {
-  font-family: "Oswald", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 3px;
   background: linear-gradient(135deg, #007bff, #0044cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
-  opacity: 0;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
   animation: fade-in 2s ease-out forwards, slide-in 1.5s ease-in-out forwards;
 }
 
-/* 🏎️ Animierter Untertitel */
 .animated-subtitle {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   color: white;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  opacity: 0;
   animation: fade-in 2s ease-in-out forwards 1s;
 }
 
-/* 🚀 Animations-Keyframes */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -173,113 +146,31 @@ section#cars img {
   }
 }
 
-/* 📱 Mobile Optimierung */
-@media (max-width: 768px) {
-  .animated-title {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-  }
-
-  .animated-subtitle {
-    font-size: 1.4rem;
-  }
-
-  .hero-overlay {
-    padding: 10px;
-  }
-}
-
-
 /* ============================================
-   Über uns & Fahrzeuge Sektion
+   Call-to-Action Bereich
 ============================================= */
-#about,
-#cars {
-  background: linear-gradient(135deg, #0075ff, #ff0000);
-  color: #fff;
+#cta .social-buttons a {
+  margin: 5px;
 }
 
 /* ============================================
-   Animierte Titel
+   Fahrzeuge Sektion
 ============================================= */
-h1.animated-title {
-  font-size: 3rem;
-  color: #88b9ff;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-  animation: fade-in 3s ease-out forwards;
+#cars .card {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-p.animated-subtitle {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-top: 20px;
-  font-weight: bold;
-  animation: slide-in 2s ease-in-out forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ============================================
-   Animierte Hintergründe
-============================================= */
-.animated-bg-section {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-  background: linear-gradient(45deg, #4a90e2, #56c596, #ffcc00);
-  background-size: 400% 400%;
-  animation: gradient-animation 8s infinite alternate;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 50% 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
+#cars .card img {
+  height: 200px;
+  object-fit: cover;
 }
 
 /* ============================================
    Kontaktformular
 ============================================= */
-#contact h2,
-#contact p,
-#contact a,
-#contact label {
-  color: #fff;
-}
-
-form .form-control {
+#contact form .form-control {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   border-radius: 8px;
@@ -309,17 +200,6 @@ footer {
   font-size: 0.9rem;
 }
 
-.footer-logo {
-  width: 150px;
-  height: auto;
-}
-
-footer h5 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
 footer p,
 footer a {
   color: #ddd;
@@ -328,328 +208,35 @@ footer a {
 
 footer a:hover {
   color: #28a745;
-  text-decoration: none;
-}
-
-footer hr {
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-footer .social-icons i {
-  font-size: 1.25rem;
-  margin-right: 10px;
-}
-
-footer .social-icons a {
-  color: #fff;
-}
-
-footer .social-icons a:hover {
-  color: #28a745;
-}
-
-footer p {
-  margin-bottom: 0;
-}
-
-/* ============================================
-   Cookie-Banner
-============================================= */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 1rem;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cookie-banner p {
-  margin: 0;
-  flex: 1;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.cookie-banner a {
-  color: #ffdd57;
-  text-decoration: underline;
-}
-
-.cookie-banner a:hover {
-  color: #fff;
-}
-
-.cookie-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.cookie-buttons .btn {
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-}
-
-.cookie-buttons .btn-success {
-  background-color: #28a745;
-  color: #fff;
-}
-
-.cookie-buttons .btn-success:hover {
-  background-color: #218838;
-}
-
-.cookie-buttons .btn-danger {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.cookie-buttons .btn-danger:hover {
-  background-color: #c82333;
-}
-
-#cookie-banner.hidden {
-  display: none !important;
-}
-
-/* Flip-Karten-Stile */
-.flip-card {
-  perspective: 1000px;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 300px;
-  /* Standardhöhe für mobile Geräte */
-  position: relative;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-  /* Drehung um 180 Grad bei der Klasse 'flipped' */
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.flip-card-front {
-  background-color: #fff;
-  /* Farbe der Vorderseite */
-}
-
-.flip-card-back {
-  background-color: #007bff;
-  color: #fff;
-  transform: rotateY(180deg);
-}
-
-.flip-card img {
-  width: 100%;
-  height: 150px;
-  /* Bildhöhe anpassen */
-  object-fit: cover;
-}
-
-.flip-card .card-body {
-  padding: 15px;
-}
-
-/* Button */
-.flip-button {
-  width: 100%;
-  margin-top: 10px;
-  display: block;
-}
-
-/* Hintergrund für den Header */
-.bg-image-header {
-  position: relative;
-  background-image: url('./img/car-bg.webp');
-  /* Pfad zu deinem Bild */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.bg-image-header .bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  /* Dunkler Overlay-Effekt */
-  z-index: 1;
-}
-
-.bg-image-header .container {
-  position: relative;
-  z-index: 2;
-  /* Inhalt über dem Overlay */
-}
-
-/* Formular-Sektion */
-.bg-image-form {
-  padding: 50px 0;
-}
-
-.bg-image-form h2,
-.bg-image-form h4,
-.bg-image-form label {
-  color: #000;
-  /* Standardtextfarbe */
-}
-
-.bg-image-form input,
-.bg-image-form button {
-  background: #fff;
-  /* Weißer Hintergrund für Eingabefelder */
-  color: #000;
-  /* Schwarzer Text */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.bg-image-form button:hover {
-  background-color: #0056b3;
-  /* Hover-Farbe */
 }
 
 /* ============================================
    Responsive Design
 ============================================= */
-
-/* 📱 Mobile Optimierung */
-@media (max-width: 991px) {
-  .navbar-custom {
-    background: rgba(0, 0, 0, 1);
-    /* Komplett schwarz auf mobilen Geräten */
-  }
-
-  .navbar-toggler {
-    border: none;
-    outline: none;
-  }
-
-  .navbar-toggler:focus {
-    box-shadow: none;
-    /* Entfernt die Umrandung beim Klicken */
-  }
-
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 10px;
-  }
-}
-
 @media (max-width: 768px) {
-  .logo-img {
-    height: 40px;
+  .animated-title {
+    font-size: 2.5rem;
   }
 
-  .navbar-brand img {
-    height: 40px;
-    /* Kleinere Höhe für Mobilgeräte */
+  .animated-subtitle {
+    font-size: 1.4rem;
   }
 
   .hero-section {
     height: 70vh;
   }
 
-  h1.animated-title {
-    font-size: 2.5rem;
-  }
-
-  p.animated-subtitle {
-    font-size: 1.2rem;
-  }
-
-  footer .text-md-end {
-    text-align: center !important;
-    margin-top: 20px;
-  }
-
-  footer .social-icons {
-    justify-content: center;
-  }
-
-  .parallax-bg {
-    background-attachment: scroll;
-    background-size: cover;
+  .hero-overlay {
+    padding: 10px;
   }
 
   #cta .social-buttons a {
     display: block;
-    /* Die Buttons werden untereinander gestapelt */
     width: 100%;
-    /* Buttons nehmen die volle Breite ein */
     margin-bottom: 10px;
-    /* Abstand zwischen den Buttons */
-  }
-
-  .animated-bg-section {
-    height: 450px;
-  }
-
-  #cars .card {
-    margin-bottom: 15px;
-    /* Weniger Abstand zwischen den Karten auf Mobilgeräten */
   }
 
   #cars .card img {
     height: 150px;
-    /* Kleinere Bildhöhe für Mobilgeräte */
-    object-fit: cover;
-  }
-
-  .flip-card {
-    height: 400px;
-    /* Höhere Karten für größere Bildschirme */
-  }
-
-  .flip-card img {
-    height: 200px;
-    /* Größeres Bild */
-  }
-
-  .flip-card .card-body {
-    height: calc(100% - 200px);
-    /* Platz für den Button */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
