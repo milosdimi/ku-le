@@ -3,23 +3,73 @@
 ============================================= */
 body {
   background: linear-gradient(135deg, #0075ff, #ff0000);
-  color: #fff; /* Weißer Text für bessere Lesbarkeit */
+  color: #fff;
+  /* Weißer Text für bessere Lesbarkeit */
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /* Moderner, cleaner Look */
 }
+
 .navbar {
-  align-items: center; /* Vertikale Zentrierung */
+  align-items: center;
+  /* Vertikale Zentrierung */
 }
+
 .navbar-brand {
   font-weight: bold;
   padding: 5px;
 }
 
-.navbar-brand img {
-  height: 50px; /* Standardhöhe für das Logo */
-  width: auto; /* Automatische Breite für Proportionen */
-  max-width: 100%; /* Verhindert Überlauf */
+/* 🏎️ Navbar Custom Styles */
+.navbar-custom {
+  background: rgba(0, 0, 0, 0);
+  /* Leicht transparenter Hintergrund */
+  -webkit-backdrop-filter: blur(8px);
+  /* Weichzeichner für besseren Look */
+  backdrop-filter: blur(5px);
+  /* Weichzeichner für besseren Look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  /* Schatten für mehr Tiefe */
+  padding: 12px 0;
+  /* Etwas mehr Padding für mehr Luft */
+  transition: all 0.3s ease-in-out;
 }
+
+/* 🏁 Navbar Hover-Effekte */
+.navbar-custom .nav-link {
+  color: #ffffff;
+  /* Standardfarbe */
+  font-weight: 500;
+  /* Etwas fetter für bessere Lesbarkeit */
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #ffdd57;
+  /* Gelbe Farbe beim Hover oder wenn aktiv */
+  background: rgba(255, 255, 255, 0.1);
+  /* Leichter Highlight-Effekt */
+  border-radius: 5px;
+}
+
+/* 📌 Fix für das Logo */
+.logo-img {
+  height: 50px;
+  /* Logo etwas größer */
+  width: auto;
+  max-width: 100%;
+  border-radius: 5px;
+  /* Verhindert Überlauf */
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  /* Leichte Vergrößerung beim Hover */
+}
+
 .header h1 {
   font-size: 3rem;
 }
@@ -45,25 +95,100 @@ section#cars img {
 /* ============================================
    Hero-Bereich
 ============================================= */
+/* 🏎️ Hero-Bereich mit Overlay */
 .hero-section {
-  background-image: url("./img/hero-bg.webp");
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
 
+/* 🖼️ Hero-Bilder im Carousel */
+.hero-img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* 🎭 Overlay für bessere Lesbarkeit */
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Dunkler, aber transparenter Overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
+
+/* 🎨 Animierter Hero-Titel */
+.animated-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #007bff, #0044cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: fade-in 2s ease-out forwards, slide-in 1.5s ease-in-out forwards;
+}
+
+/* 🏎️ Animierter Untertitel */
+.animated-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards 1s;
+}
+
+/* 🚀 Animations-Keyframes */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Mobile Optimierung */
+@media (max-width: 768px) {
+  .animated-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  .animated-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero-overlay {
+    padding: 10px;
+  }
+}
+
 
 /* ============================================
    Über uns & Fahrzeuge Sektion
@@ -99,6 +224,7 @@ p.animated-subtitle {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -110,6 +236,7 @@ p.animated-subtitle {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -132,9 +259,11 @@ p.animated-subtitle {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 50% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }
@@ -298,7 +427,8 @@ footer p {
   perspective: 1000px;
   margin-bottom: 20px;
   width: 100%;
-  height: 300px; /* Standardhöhe für mobile Geräte */
+  height: 300px;
+  /* Standardhöhe für mobile Geräte */
   position: relative;
 }
 
@@ -309,8 +439,10 @@ footer p {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
+
 .flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg); /* Drehung um 180 Grad bei der Klasse 'flipped' */
+  transform: rotateY(180deg);
+  /* Drehung um 180 Grad bei der Klasse 'flipped' */
 }
 
 .flip-card-front,
@@ -324,7 +456,8 @@ footer p {
 }
 
 .flip-card-front {
-  background-color: #fff; /* Farbe der Vorderseite */
+  background-color: #fff;
+  /* Farbe der Vorderseite */
 }
 
 .flip-card-back {
@@ -335,7 +468,8 @@ footer p {
 
 .flip-card img {
   width: 100%;
-  height: 150px; /* Bildhöhe anpassen */
+  height: 150px;
+  /* Bildhöhe anpassen */
   object-fit: cover;
 }
 
@@ -353,7 +487,8 @@ footer p {
 /* Hintergrund für den Header */
 .bg-image-header {
   position: relative;
-  background-image: url('./img/car-bg.webp'); /* Pfad zu deinem Bild */
+  background-image: url('./img/car-bg.webp');
+  /* Pfad zu deinem Bild */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -371,13 +506,15 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dunkler Overlay-Effekt */
+  background: rgba(0, 0, 0, 0.7);
+  /* Dunkler Overlay-Effekt */
   z-index: 1;
 }
 
 .bg-image-header .container {
   position: relative;
-  z-index: 2; /* Inhalt über dem Overlay */
+  z-index: 2;
+  /* Inhalt über dem Overlay */
 }
 
 /* Formular-Sektion */
@@ -388,30 +525,63 @@ footer p {
 .bg-image-form h2,
 .bg-image-form h4,
 .bg-image-form label {
-  color: #000; /* Standardtextfarbe */
+  color: #000;
+  /* Standardtextfarbe */
 }
 
 .bg-image-form input,
 .bg-image-form button {
-  background: #fff; /* Weißer Hintergrund für Eingabefelder */
-  color: #000; /* Schwarzer Text */
+  background: #fff;
+  /* Weißer Hintergrund für Eingabefelder */
+  color: #000;
+  /* Schwarzer Text */
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 .bg-image-form button:hover {
-  background-color: #0056b3; /* Hover-Farbe */
+  background-color: #0056b3;
+  /* Hover-Farbe */
 }
 
 /* ============================================
    Responsive Design
 ============================================= */
+
+/* 📱 Mobile Optimierung */
+@media (max-width: 991px) {
+  .navbar-custom {
+    background: rgba(0, 0, 0, 1);
+    /* Komplett schwarz auf mobilen Geräten */
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    /* Entfernt die Umrandung beim Klicken */
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .logo-img {
     height: 40px;
   }
+
   .navbar-brand img {
-    height: 40px; /* Kleinere Höhe für Mobilgeräte */
+    height: 40px;
+    /* Kleinere Höhe für Mobilgeräte */
   }
 
   .hero-section {
@@ -439,32 +609,44 @@ footer p {
     background-attachment: scroll;
     background-size: cover;
   }
+
   #cta .social-buttons a {
-    display: block; /* Die Buttons werden untereinander gestapelt */
-    width: 100%; /* Buttons nehmen die volle Breite ein */
-    margin-bottom: 10px; /* Abstand zwischen den Buttons */
+    display: block;
+    /* Die Buttons werden untereinander gestapelt */
+    width: 100%;
+    /* Buttons nehmen die volle Breite ein */
+    margin-bottom: 10px;
+    /* Abstand zwischen den Buttons */
   }
+
   .animated-bg-section {
     height: 450px;
   }
+
   #cars .card {
-    margin-bottom: 15px; /* Weniger Abstand zwischen den Karten auf Mobilgeräten */
+    margin-bottom: 15px;
+    /* Weniger Abstand zwischen den Karten auf Mobilgeräten */
   }
 
   #cars .card img {
-    height: 150px; /* Kleinere Bildhöhe für Mobilgeräte */
+    height: 150px;
+    /* Kleinere Bildhöhe für Mobilgeräte */
     object-fit: cover;
   }
+
   .flip-card {
-    height: 400px; /* Höhere Karten für größere Bildschirme */
+    height: 400px;
+    /* Höhere Karten für größere Bildschirme */
   }
 
   .flip-card img {
-    height: 200px; /* Größeres Bild */
+    height: 200px;
+    /* Größeres Bild */
   }
 
   .flip-card .card-body {
-    height: calc(100% - 200px); /* Platz für den Button */
+    height: calc(100% - 200px);
+    /* Platz für den Button */
     display: flex;
     flex-direction: column;
     justify-content: center;
