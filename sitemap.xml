@@ -9,17 +9,27 @@
 
 <url>
   <loc>https://ku-le.cc/</loc>
-  <lastmod>2024-12-11T00:35:21+00:00</lastmod>
+  <lastmod>2025-02-20T20:11:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://ku-le.cc/index.html</loc>
-  <lastmod>2024-12-11T00:35:21+00:00</lastmod>
+  <lastmod>2025-02-20T20:11:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ku-le.cc/ankauf.html</loc>
-  <lastmod>2024-12-11T00:35:21+00:00</lastmod>
+  <lastmod>2025-02-20T20:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ku-le.cc/impressum.html</loc>
+  <lastmod>2025-02-20T20:11:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ku-le.cc/datenschutzerklaerung.html</loc>
+  <lastmod>2025-02-20T20:11:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
