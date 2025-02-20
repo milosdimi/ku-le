@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  background: linear-gradient(135deg, #0075ff, #ff0000);
+  background: linear-gradient(to right, #002147, #003366);
   color: #fff;
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
@@ -535,6 +535,127 @@ form .btn-primary:hover {
 }
 
 /* ============================================
+   Ankauf HTML
+============================================= */
+
+/* 🏎️ Hero-Bereich */
+.bg-image-header {
+  position: relative;
+  background: url('./img/car-bg.webp') center/cover no-repeat;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 📌 Overlay für bessere Lesbarkeit */
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  /* Hintergrund bleibt im Hintergrund */
+}
+
+/* 🎭 Haupttitel */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* ✨ Hero-Text auf oberster Ebene */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  /* Hebt den Text über das Overlay */
+}
+
+/* 📢 Untertitel */
+.hero-subtitle {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+/* 🔘 Buttons */
+.btn-lg {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+/* 🚗 Ankauf-Formular Styling */
+.ankauf-form .form-control {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ankauf-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ankauf-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #00cc66;
+}
+
+.ankauf-form .btn-primary {
+  background-color: #00cc66;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.ankauf-form .btn-primary:hover {
+  background-color: #00994d;
+}
+
+/* 📜 Allgemeines Styling für die Datenschutzerklärung */
+.privacy-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #007bff;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* ✨ Icons vor den Titeln */
+.privacy-section h2 {
+  font-size: 1.6rem;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.privacy-section h2 i {
+  margin-right: 10px;
+  font-size: 1.8rem;
+}
+
+/* ✨ Scroll-Effekt */
+.privacy-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.custom-header {
+  padding-top: 7rem !important;
+  padding-bottom: 3rem;
+}
+
+
+/* ============================================
    Responsive Design
 ============================================= */
 @media (max-width: 768px) {
@@ -610,5 +731,24 @@ form .btn-primary:hover {
 
   .social-icons {
     justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .privacy-section h2 {
+    font-size: 1.01rem;
+  }
+  .fw-bold {
+    font-size: 1.1rem;
   }
 }
