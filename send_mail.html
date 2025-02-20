@@ -5,120 +5,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ku-Le Cars | Danke</title>
-
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+  
+    <!-- Content Security Policy (CSP) - Erlaubt Google Fonts, Bootstrap & lokale Inhalte -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+      font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/npm/bootstrap-icons/font/;
+      script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline' 'unsafe-eval';
+      img-src 'self' data: https://www.ku-le.cc/;
+      frame-src 'self' https://www.google.com https://www.youtube.com;">
+  
     <!-- SEO Meta-Tags -->
-    <meta
-      name="description"
-      content="Ku-Le Cars - Ihr vertrauenswürdiger Auto-Händler in Kufstein mit einer großen Auswahl an Fahrzeugen."
-    />
-    <meta
-      name="keywords"
-      content="Auto, Autohändler Kufstein, Fahrzeuge, Ku-Le Cars, Auto kaufen, Gebrauchtwagen, Kufstein"
-    />
+    <meta name="description"
+      content="Sie möchten Ihr Auto verkaufen? Ku-Le Cars in Kufstein kauft alle Fahrzeuge – schnell, fair & unkompliziert. Jetzt kostenloses Angebot erhalten!" />
     <meta name="author" content="Ku-Le Cars" />
     <link rel="canonical" href="https://www.ku-le.cc/" />
-    <!-- Ändere auf deine Domain -->
     <meta name="robots" content="index, follow" />
-    <!-- Indexiere die Seite und folge den Links -->
-
+  
     <!-- Open Graph (OG) Tags für Social Media -->
-    <meta
-      property="og:title"
-      content="Ku-Le Cars | Ihr Auto-Händler in Kufstein - Österreich"
-    />
-    <meta
-      property="og:description"
-      content="Verkaufen Sie Ihr Auto einfach und unkompliziert mit Ku-Le - kostenfreie Abholung in ganz Österreich."
-    />
+    <meta property="og:title" content="Ku-Le Cars | Ihr Auto-Händler in Kufstein - Österreich" />
+    <meta property="og:description"
+      content="Verkaufen Sie Ihr Auto einfach und unkompliziert mit Ku-Le Cars - kostenfreie Abholung in ganz Österreich." />
     <meta property="og:url" content="https://www.ku-le.cc/" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://www.ku-le.cc/img/ku-le-logo.JPEG"
-    />
-    <!-- Pfad zum Bild (Logo oder hero-image) -->
+    <meta property="og:site_name" content="Ku-Le Cars" />
+    <meta property="og:image" content="https://www.ku-le.cc/img/ku-le-preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="de_AT" />
-    <!-- Sprache/Region für OG -->
-
+  
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Ku-Le Cars | Ihr Auto-Händler in Kufstein - Österreich"
-    />
-    <meta
-      name="twitter:description"
-      content="Verkaufen Sie Ihr Auto einfach und unkompliziert mit Ku-Le Cars - kostenfreie Abholung in ganz Österreich."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.ku-le.cc/img/ku-le-logo.JPEG"
-    />
-
+    <meta name="twitter:title" content="Ku-Le Cars | Ihr Auto-Händler in Kufstein - Österreich" />
+    <meta name="twitter:description"
+      content="Verkaufen Sie Ihr Auto einfach und unkompliziert mit Ku-Le Cars - kostenfreie Abholung in ganz Österreich." />
+    <meta name="twitter:image" content="https://www.ku-le.cc/img/ku-le-preview.jpg" />
+  
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./img/ku-le-logo.JPEG"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./img/ku-le-logo.JPEG"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/ku-le-logo.JPEG" />
     <link rel="apple-touch-icon" href="./img/ku-le-logo.JPEG" />
-
-    <!-- Preload / Preconnect -->
+  
+    <!-- Performance Optimierung -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-
+  
     <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Eigene CSS-Datei -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+    <!-- Eigene CSS-Dateien -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/ku-le-logo.JPEG" alt="Ku-Le Logo" class="logo-img" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ankauf.html">ANKAUF</a>
-            </li>
-          </ul>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/ku-le-logo.JPEG" alt="Ku-Le Logo" class="logo-img" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ankauf.html">ANKAUF</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
     <!-- Hero-Bereich -->
     <header class="hero-section">
       <div class="hero-overlay">
@@ -140,114 +110,90 @@
       </div>
     </header>
 
-    <footer class="bg-dark text-white py-4">
+    <footer class="footer bg-dark text-white py-4">
       <div class="container">
         <div class="row">
           <!-- Logo und Beschreibung -->
-          <div class="col-md-4 mb-4">
-            <img
-              src="./img/ku-le-logo.JPEG"
-              alt="Ku-Le Logo"
-              class="footer-logo mb-3"
-            />
+          <div class="col-md-4 mb-4 text-center text-md-start">
+            <img src="./img/ku-le-logo.JPEG" alt="Ku-Le Logo" class="footer-logo mb-3" />
             <p>
               Ku-Le Cars - Ihr vertrauenswürdiger Auto-Händler. Wir kaufen
               Fahrzeuge in jedem Zustand - schnell, einfach und unkompliziert.
             </p>
           </div>
-
+  
           <!-- Kontaktinformationen -->
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4 text-center text-md-start">
             <h5>Kontakt</h5>
             <ul class="list-unstyled contact-info">
               <li>
                 <i class="bi bi-telephone-fill"></i>
-                <a href="tel:+436767575687">+436767575687</a>
+                <a href="tel:+436767575687">+43 676 7575687</a>
               </li>
               <li>
                 <i class="bi bi-envelope-fill"></i>
                 <a href="mailto:info@ku-le.cc">info@ku-le.cc</a>
               </li>
               <li>
-                <i class="bi bi-geo-alt-fill"></i> Musterstraße 12, 12345
-                Musterstadt, Deutschland
+                <i class="bi bi-geo-alt-fill"></i> Münchner Str. 21, 6330 Kufstein
               </li>
             </ul>
           </div>
-
+  
           <!-- Social Media & Rechtliches -->
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4 text-center text-md-start">
             <h5>Folge uns</h5>
             <div class="social-icons">
-              <a
-                href="https://www.facebook.com/nikola.stojanovic.332"
-                class="text-white me-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="bi bi-facebook fs-4"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/nikol8098/"
-                class="text-white me-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="bi bi-instagram fs-4"></i
-              ></a>
-              <a
-                href="https://wa.me/+436767575687"
-                class="text-white me-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="bi bi-whatsapp fs-4"></i
-              ></a>
+              <a href="https://www.facebook.com/nikola.stojanovic.332" class="social-link" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="https://www.instagram.com/nikol8098/" class="social-link" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-instagram fs-4"></i></a>
+              <a href="https://wa.me/+436767575687" class="social-link" target="_blank" rel="noopener noreferrer"><i
+                  class="bi bi-whatsapp fs-4"></i></a>
             </div>
-
+  
             <h5 class="mt-4">Rechtliches</h5>
             <ul class="list-unstyled">
-              <li><a href="impressum.html" class="text-white">Impressum</a></li>
-              <li>
-                <a href="datenschutzerklaerung.html" class="text-white"
-                  >Datenschutz</a
-                >
-              </li>
+              <li><a href="impressum.html" class="footer-link">Impressum</a></li>
+              <li><a href="datenschutzerklaerung.html" class="footer-link">Datenschutz</a></li>
             </ul>
           </div>
         </div>
-
-        <hr class="bg-white" />
-
-        <div class="row">
-          <div class="col-md-6">
+  
+        <hr class="bg-white opacity-50" />
+  
+        <div class="row text-center">
+          <div class="col-12">
             <p class="mb-0">
               © 2024 Ku-Le Cars. Alle Rechte vorbehalten. | made by
-              <a
-                href="https://www.dimit.cc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >dimit</a
-              >
+              <a href="https://www.dimit.cc/" target="_blank" rel="noopener noreferrer" class="footer-link">dimit</a>
             </p>
           </div>
         </div>
       </div>
     </footer>
+  
     <!-- Cookie-Banner -->
-    <div id="cookie-banner" class="cookie-banner hidden">
+    <div id="cookie-banner" class="cookie-banner">
       <p>
         Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu
         verbessern. Indem Sie auf „Akzeptieren“ klicken, stimmen Sie der
         Verwendung von Cookies zu. Weitere Informationen finden Sie in unserer
-        <a
-          href="datenschutzerklaerung.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Datenschutzerklärung</a
-        >.
+        <a href="datenschutzerklaerung.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>.
       </p>
       <div class="cookie-buttons">
         <button id="accept-cookies" class="btn btn-success">Akzeptieren</button>
         <button id="decline-cookies" class="btn btn-danger">Ablehnen</button>
       </div>
     </div>
+  
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" title="Scroll to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>

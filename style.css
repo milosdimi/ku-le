@@ -1,22 +1,10 @@
 /* ============================================
    Globale Stile
 ============================================= */
-@font-face {
-  font-family: 'Josefin Sans';
-  src: url('./fonts/JosefinSans-Regular.woff2') format('woff2'),
-       url('./fonts/JosefinSans-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+html,
+body {
+  overflow-x: hidden;
 }
-
-@font-face {
-  font-family: 'Josefin Sans';
-  src: url('./fonts/JosefinSans-Bold.woff2') format('woff2'),
-       url('./fonts/JosefinSans-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
 
 body {
   background: linear-gradient(135deg, #0075ff, #ff0000);
@@ -40,31 +28,33 @@ h3 {
 /* ============================================
    Navigation
 ============================================= */
-.navbar {
-  align-items: center;
+/* 🔹 Navbar-Styling */
+.navbar-custom {
+  background: rgba(0, 0, 0, 0.2);
+  /* Leicht transparenter Hintergrund */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 12px 0;
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-custom {
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 12px 0;
-}
-
+/* ✅ Navbar-Links */
 .navbar-custom .nav-link {
-  color: #ffffff;
+  color: #86b7fe;
   font-weight: 500;
   padding: 10px 15px;
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
+/* 🔥 Hover-Effekt */
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
-  color: #ffdd57;
+  color: #86b7fe;
+  /* Goldene Farbe */
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
 
+/* ✅ Logo-Optimierung */
 .logo-img {
   height: 50px;
   width: auto;
@@ -118,10 +108,9 @@ h3 {
 }
 
 .animated-subtitle {
-  font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
-  color: white;
+  color: #86b7fe;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   animation: fade-in 2s ease-in-out forwards 1s;
 }
@@ -149,65 +138,396 @@ h3 {
 /* ============================================
    Call-to-Action Bereich
 ============================================= */
-#cta .social-buttons a {
-  margin: 5px;
+/* Über uns Sektion */
+#about {
+  background: linear-gradient(to right, #002147, #003366);
+  color: white;
+  padding: 60px 0;
+}
+
+/* Titel-Styling */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:#86b7fe ;
+  border-bottom: 3px solid #86b7fe;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Beschreibung */
+.section-description {
+  font-size: 1.1rem;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Feature Liste */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #86b7fe;
+}
+
+.feature-item i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Button */
+.btn-primary {
+  background: #86b7fe;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2300e6;
+}
+
+/* Bild-Styling */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ==========================================
+   Call-to-Action Sektion
+=========================================== */
+#cta {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("./img/hero1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Titel & Text */
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #86b7fe;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btn {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* ============================================
    Fahrzeuge Sektion
 ============================================= */
-#cars .card {
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Hintergrund für die Fahrzeuge-Sektion */
+#cars {
+  background: linear-gradient(to right, #002147, #003366);
 }
 
-#cars .card img {
-  height: 200px;
+/* Styling der Bilder im Carousel */
+.car-img {
+  height: 500px;
   object-fit: cover;
+  border-radius: 10px;
 }
+
+
 
 /* ============================================
    Kontaktformular
 ============================================= */
-#contact form .form-control {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border-radius: 8px;
+/* 📌 Kontakt Sektion */
+#contact {
+  background: linear-gradient(to right, #002147, #003366);
+  color: white;
+  padding: 60px 0;
 }
 
-form button[type="submit"] {
-  background-color: #0075ff;
+.contact-info li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  color: #86b7fe;
+  margin-right: 8px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+/* 🗺️ Google Maps Styling */
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.map-embed {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+/* 📩 Formular Styling */
+form .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffdd57;
+}
+
+form .btn-primary {
+  background-color: #86b7fe;
   border: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: all 0.3s;
+  font-size: 1.1rem;
 }
 
-form button[type="submit"]:hover {
+form .btn-primary:hover {
+  background-color: #2300e6;
+}
+
+/* ===============================
+   📌 FOOTER DESIGN
+================================ */
+
+/* Footer-Styling */
+.footer {
+  background: linear-gradient(to right, #000428, #004e92);
+  color: white;
+  padding: 40px 0;
+  font-size: 1rem;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 🔗 Kontakt- & Social-Media-Links */
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-info i {
+  color: #86b7fe;
+  margin-right: 8px;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #ffdd57;
+}
+
+/* 🌐 Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  color: #2300e6;
+}
+
+/* 📜 Rechtliche Links */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #ffdd57;
+}
+
+/* 📏 Trennlinie */
+.footer hr {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  margin: 20px 0;
+}
+
+/* Cookie-Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  z-index: 9999;
+  display: none; /* Standardmäßig versteckt */
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cookie-banner a {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+.cookie-banner a:hover {
+  color: #fff;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cookie-buttons .btn {
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.cookie-buttons .btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.cookie-buttons .btn-success:hover {
+  background-color: #218838;
+}
+
+.cookie-buttons .btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.cookie-buttons .btn-danger:hover {
+  background-color: #c82333;
+}
+/* 🔝 Scroll-to-Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff; /* Blaue Farbe */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: none; /* Versteckt, bis man scrollt */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scroll-top:hover {
   background-color: #0056b3;
 }
 
-/* ============================================
-   Footer
-============================================= */
-footer {
-  background-color: #000;
-  color: #fff;
-  font-size: 0.9rem;
+.scroll-top.show {
+  display: flex; /* Zeigt den Button an */
+  opacity: 1;
+  transform: scale(1);
 }
 
-footer p,
-footer a {
-  color: #ddd;
-  font-size: 0.9rem;
-}
-
-footer a:hover {
-  color: #28a745;
+.scroll-top.hide {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
 }
 
 /* ============================================
@@ -215,15 +535,11 @@ footer a:hover {
 ============================================= */
 @media (max-width: 768px) {
   .animated-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .animated-subtitle {
     font-size: 1.4rem;
-  }
-
-  .hero-section {
-    height: 70vh;
   }
 
   .hero-overlay {
@@ -238,5 +554,53 @@ footer a:hover {
 
   #cars .card img {
     height: 150px;
+  }
+
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.9);
+    /* Dunkler Hintergrund für Mobilmenü */
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .image-container {
+    margin-top: 30px;
+  }
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .map-embed {
+    height: 200px;
+  }
+  .footer {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }

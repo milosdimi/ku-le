@@ -34,40 +34,50 @@ function sendMail(event) {
     });
 }
 
-// Check if the user has previously accepted/declined cookies
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add("show");
+      scrollTopBtn.classList.remove("hide");
+    } else {
+      scrollTopBtn.classList.add("hide");
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const cookieBanner = document.getElementById("cookie-banner");
   const acceptButton = document.getElementById("accept-cookies");
   const declineButton = document.getElementById("decline-cookies");
 
-  // Überprüfen, ob der Benutzer bereits eine Wahl getroffen hat
+  // Überprüfen, ob der Benutzer bereits eine Entscheidung getroffen hat
   if (!localStorage.getItem("cookiesAccepted")) {
-    cookieBanner.classList.remove("hidden"); // Cookie-Banner anzeigen
+    cookieBanner.style.display = "block"; // Cookie-Banner anzeigen
   } else {
-    cookieBanner.classList.add("hidden"); // Cookie-Banner ausblenden
+    cookieBanner.style.display = "none"; // Cookie-Banner ausblenden
   }
 
   // Benutzer akzeptiert Cookies
   acceptButton.addEventListener("click", function () {
     localStorage.setItem("cookiesAccepted", "true");
-    cookieBanner.classList.add("hidden"); // Cookie-Banner ausblenden
+    cookieBanner.style.display = "none"; // Cookie-Banner ausblenden
   });
 
   // Benutzer lehnt Cookies ab
   declineButton.addEventListener("click", function () {
     localStorage.setItem("cookiesAccepted", "false");
-    cookieBanner.classList.add("hidden"); // Cookie-Banner ausblenden
+    cookieBanner.style.display = "none"; // Cookie-Banner ausblenden
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const flipButtons = document.querySelectorAll('.flip-button');
-
-  flipButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const flipCard = button.closest('.flip-card');
-      flipCard.classList.toggle('flipped'); // Karte drehen oder zurückdrehen
-    });
-  });
-});
 
