@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieBanner.style.display = "none";
   });
 
-  // Scroll-Animation für #about
+  // Funktion für Viewport-Check
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -55,21 +55,49 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
+  // Scroll-Animation für #about
   const aboutSection = document.querySelector("#about");
   const textColumn = aboutSection.querySelector(".col-lg-6:first-child");
   const imageColumn = aboutSection.querySelector(".col-lg-6:last-child");
   const featureItems = aboutSection.querySelectorAll(".feature-item");
   let hasAnimated = false;
 
+  // Scroll-Animation für #cta
+  const ctaSection = document.querySelector("#cta");
+  const ctaButtons = ctaSection.querySelectorAll(".social-btn");
+  let ctaHasAnimated = false;
+
   window.addEventListener("scroll", function () {
+    // #about Animation
     if (isInViewport(aboutSection) && !hasAnimated) {
-      console.log("Animation triggered"); // Debugging
+      console.log("About Animation triggered");
       textColumn.classList.add("visible");
       imageColumn.classList.add("visible");
       featureItems.forEach((item, index) => {
         setTimeout(() => item.classList.add("visible"), index * 150);
       });
       hasAnimated = true;
+    }
+
+    // #cta Animation
+    if (isInViewport(ctaSection) && !ctaHasAnimated) {
+      console.log("CTA Animation triggered");
+      ctaSection.classList.add("visible");
+      ctaButtons.forEach((btn, index) => {
+        setTimeout(() => btn.classList.add("visible"), index * 150);
+      });
+      ctaHasAnimated = true;
+    }
+
+    // Parallax-Effekt für #cta
+    const ctaImg = document.querySelector(".cta-bg-img");
+    if (ctaImg) { // Nur ausführen, wenn das Bild existiert
+      const ctaSectionTop = ctaSection.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (ctaSectionTop < windowHeight && ctaSectionTop > -ctaSection.offsetHeight) {
+        const scrollPosition = (ctaSectionTop - windowHeight) * 0.2;
+        ctaImg.style.transform = `translateY(${scrollPosition}px)`;
+      }
     }
   });
 });
