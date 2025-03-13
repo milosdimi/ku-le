@@ -159,6 +159,7 @@ h3 {
   transform: scale(0.9);
   transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
+
 #about .col-lg-6.visible .image-container img {
   opacity: 1;
   transform: scale(1);
@@ -234,10 +235,18 @@ h3 {
 ============================================ */
 #cta {
   position: relative;
+  background: linear-gradient(to right, #002147, #003366);
   padding: 80px 0;
   color: #fff;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  min-height: 400px;
+}
+
+#cta.visible {
+  opacity: 1;
 }
 
 .cta-background {
@@ -245,41 +254,67 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 126%;
-  z-index: -1; /* Hinter den Inhalt setzen */
-  overflow: hidden;
+  height: 100%;
+  overflow: visible;
+  /* Wellen nicht abschneiden */
+  /* z-index: -1 entfernt */
 }
 
-.cta-bg-img {
+.wave-svg {
   width: 100%;
-  height: 120%; /* Etwas größer, für Parallax-Effekt */
-  object-fit: cover;
+  height: 100%;
   position: absolute;
-  top: -10%; /* Startposition leicht höher */
+  top: 0;
   left: 0;
-  filter: brightness(0.6); /* Dunkler machen, ersetzt den Gradient */
 }
 
-#cta .social-buttons {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* Container nach vorne bringen */
+.container {
+  position: relative;
+  z-index: 2;
+  /* Über den Wellen */
 }
 
-#cta.visible .social-buttons {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Buttons-Animation */
 #cta .social-btn {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 #cta.visible .social-btn {
   opacity: 1;
   transform: translateY(0);
+  animation: bounceIn 0.5s ease-out forwards;
+}
+
+.wave-svg .wave-1 {
+  fill: linear-gradient(90deg, #86b7fe, #4a90e2);
+  fill-opacity: 0.4;
+}
+
+.wave-svg .wave-2 {
+  fill: linear-gradient(90deg, #4a90e2, #1e90ff);
+  fill-opacity: 0.3;
+}
+
+.wave-svg .wave-3 {
+  fill: linear-gradient(90deg, #1e90ff, #4682b4);
+  fill-opacity: 0.2;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* ============================================
